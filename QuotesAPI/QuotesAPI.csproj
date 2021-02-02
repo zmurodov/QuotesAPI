@@ -2,10 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>3aebcc7f-524e-4d23-a8ee-8af37f1a208e</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.5.0" />
     <PackageReference Include="NETCore.MailKit" Version="2.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>

@@ -8,7 +8,6 @@ namespace QuotesAPI.Dtos.Category
 {
     public class CategoryCreateDto
     {
-        [Required]
         public string Name { get; set; }
     }
 }

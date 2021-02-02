@@ -14,6 +14,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation.AspNetCore;
+using QuotesAPI.FIlters;
 
 namespace QuotesAPI
 {
@@ -34,7 +36,11 @@ namespace QuotesAPI
                 .Get<EmailConfiguration>();
             services.AddSingleton(emailConfig);
 
-            services.AddControllers();
+            services.AddMvc(options =>
+                {
+                    options.Filters.Add<ValidationFilter>();
+                }) 
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Startup>());
 
             services.AddSwaggerGen();
 
